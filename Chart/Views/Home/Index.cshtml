@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form action="/Home/Index" method="POST" class="ajax">
+        <div>
+            <p>
+                <label for="StartDate">Start Date:</label>
+                @*@Html.TextBox("StartDate", null, new { @readonly = "readonly" })*@
+                @Html.TextBox("StartDate", new { @Value = ViewBag.startdate }, new { @class = "datepicker" })   @*new { @Value = ViewBag.startdate }*@
+            </p>
+            <p>
+                <label for="EndDate">End Date:</label>
+                @Html.TextBox("EndDate", null, new { @class = "datepicker" })
+            </p>
+            <p>
+                @*@Html.TextBox("submit", null, new { @type = "submit", @value = "Get charts" })*@
+                <input id="submit"  type="submit" value="Get Charts" />
+            </p>
+        </div>
+    </form>
+    @Html.Partial("_HomeCharts")
+</body>
+</html>

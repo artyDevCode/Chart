@@ -1,0 +1,43 @@
+﻿
+<div id="newCharts">
+    <div>
+        <div class="col-md-6">
+            <h5>Bar Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "ActorList", chartTitle = "Count of Groups" }); }
+        </div>
+        <div class="col-md-6">
+            <h5>Pie Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "MinisterList", chartTitle = "Requests by Ministers" }); }
+        </div>
+    </div>
+    <div>
+        <div class="col-md-6">
+            <h5>Bar Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "TimeExtendedBoolList", chartTitle = "Negotiated Timeframes" }); }
+        </div>
+        <div class="col-md-6">
+            <h5>Pie Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "CntOfDateReceivedList", chartTitle = "Total" }); }
+        </div>
+    </div>
+    <div>
+        <div class="col-md-6">
+            <h5>Bar Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "CntIsTimeExtendedList", chartTitle = "Timing for Action/Actor" }); }
+        </div>
+        <div class="col-md-6">
+            <h5>Pie Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "CntOfDivisionList", chartTitle = "Divisions" }); }
+        </div>
+    </div>
+    <div>
+        <div class="col-md-6">
+            <h5>Bar Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "CntOfPortfolioList", chartTitle = "Count by Portfolio" }); }
+        </div>
+        <div class="col-md-6">
+            <h5>Pie Chart</h5>
+            @{ Html.RenderAction("Chart", "Home", new { chartName = "CntTimingForActionList", chartTitle = "Timing for Action" }); }
+        </div>
+    </div>
+</div>
